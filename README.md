@@ -21,6 +21,19 @@ The language used is Python. We used Tensorflow 2.3.
     It uses the ResNet34 architecture to predict the type of tissue( 3 categories)
     It is split in 4 files in order to be able to run them independently.
 
+* *ResNet50/* <br>
+    * *Resnet50_batch/* <br>
+        * *resnet50_arg_simult.batch* <br>
+    * *Resnet50_python/* <br>
+        * *archResNet50_arg.py* <br>
+
+    The python file is used as:
+    *archResNet50_arg.py testing_kidney validation_kidney*
+    e.g.
+    > archResNet50_arg.py 1 2
+
+    The batch file was used in Summit supercomputer.
+
 # Contact
 
 Paul Calle - pcallec@ou.edu <br>
