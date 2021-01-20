@@ -27,8 +27,9 @@ The language used is Python. We used Tensorflow 2.3.
     * *Resnet50_python/* <br>
         * *archResNet50_arg.py* <br>
 
-    The python file is used as:
-    *archResNet50_arg.py testing_kidney validation_kidney*
+    The python file is used as: <br>
+    > archResNet50_arg.py testing_kidney validation_kidney
+    
     e.g.
     > archResNet50_arg.py 1 2
 
