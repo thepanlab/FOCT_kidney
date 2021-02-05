@@ -13,21 +13,47 @@ The language used is Python. We used Tensorflow 2.3.
 * *0-Read_images.ipynb* <br>
     It process the images from JPEG to numpy ndarray binaries
 * *ResNet34/* <br>
-    * *archResNet_p1.py* <br>
-    * *archResNet_p2.py* <br>
-    * *archResNet_p3.py* <br>
-    * *archResNet_p4.py* <br>
+    * Cross-validation
+        * *archResNet_p1.py* <br>
+        * *archResNet_p2.py* <br>
+        * *archResNet_p3.py* <br>
+        * *archResNet_p4.py* <br>
 
     It uses the ResNet34 architecture to predict the type of tissue( 3 categories)
     It is split in 4 files in order to be able to run them independently.
 
+* *PT_MobileNetv2/* <br>
+    * Cross-validation
+        * *PT_MobileNetv2_batch/* <br>
+            * *mobilenetv2_tl_arg_simult_vC.batch*
+        * *PT_MobileNetv2_python/* <br>
+            * *mobilenetv2_tl_arg_vC.py*
 * *ResNet50/* <br>
-    * *Resnet50_batch/* <br>
-        * *resnet50_arg_simult.batch* <br>
-    * *Resnet50_python/* <br>
-        * *archResNet50_arg.py* <br>
+    * Cross-validation
+        * *Resnet50_batch/* <br>
+            * *resnet50_arg_simult.batch* <br>
+        * *Resnet50_python/* <br>
+            * *archResNet50_arg.py* <br>
+    * Cross-testing
+        * *Resnet50_batch/* <br>
+            * *resnet50_arg_outer_simult.batch* <br>
+        * *Resnet50_python/* <br>
+            * *archResNet50_arg_outer.py* <br>
+    
+* *PT_ResNet50/* <br>
+    * Cross-validation
+        * *PT_Resnet50_batch/* <br>
+            * *resnet50_tl_arg_simult.batch* <br>
+        * *PT_Resnet50_python/* <br>
+            * *archResNet50_tl_arg.py* <br>
+    * Cross-testing
+        * *PT_Resnet50_batch/* <br>
+            * *resnet50_tl_arg_outer_simult.batch* <br>
+        * *PT_Resnet50_python/* <br>
+            * *archResNet50_tl_arg_outer.py* <br>
 
-    The python file is used as: <br>
+
+For *ResNet34* run the python code, for the rest you need to use arguments.    The python file is used as: <br>
     > archResNet50_arg.py testing_kidney validation_kidney
     
     e.g.

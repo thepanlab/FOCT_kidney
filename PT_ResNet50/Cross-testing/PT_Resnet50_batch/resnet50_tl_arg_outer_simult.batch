@@ -1,0 +1,53 @@
+#BSUB -P BIF121
+#BSUB -W 2:00
+#BSUB -nnodes 2
+#BSUB -q batch
+#BSUB -J resnet50_tl_simult
+#BSUB -o /ccs/proj/bif121/kidney/resnet50_tl_outer_output/resnet50_tl_simult_%J.out
+#BSUB -e /ccs/proj/bif121/kidney/resnet50_tl_outer_output/resnet50_tl_simult_%J.err
+
+module load open-ce
+
+export OMP_NUM_THREADS=7
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/resnet50_tl_python_outer/archResNet50_tl_arg_outer.py 1 34 8  \
+													> ../resnet50_tl_outer_output/output_K1.txt \
+													2> ../resnet50_tl_outer_output/error_K1.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/resnet50_tl_python_outer/archResNet50_tl_arg_outer.py 2 20 13 \
+													> ../resnet50_tl_outer_output/output_K2.txt \
+													2> ../resnet50_tl_outer_output/error_K2.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/resnet50_tl_python_outer/archResNet50_tl_arg_outer.py 3 17 7 \
+													> ../resnet50_tl_outer_output/output_K3.txt \
+													2> ../resnet50_tl_outer_output/error_K3.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/resnet50_tl_python_outer/archResNet50_tl_arg_outer.py 4 26 11 \
+													> ../resnet50_tl_outer_output/output_K4.txt \
+													2> ../resnet50_tl_outer_output/error_K4.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/resnet50_tl_python_outer/archResNet50_tl_arg_outer.py 5 29 6 \
+													> ../resnet50_tl_outer_output/output_K5.txt \
+													2> ../resnet50_tl_outer_output/error_K5.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/resnet50_tl_python_outer/archResNet50_tl_arg_outer.py 6 26 12 \
+													> ../resnet50_tl_outer_output/output_K6.txt \
+													2> ../resnet50_tl_outer_output/error_K6.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/resnet50_tl_python_outer/archResNet50_tl_arg_outer.py 7 29 8 \
+													> ../resnet50_tl_outer_output/output_K7.txt \
+													2> ../resnet50_tl_outer_output/error_K7.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/resnet50_tl_python_outer/archResNet50_tl_arg_outer.py 8 30 7 \
+													> ../resnet50_tl_outer_output/output_K8.txt \
+													2> ../resnet50_tl_outer_output/error_K8.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/resnet50_tl_python_outer/archResNet50_tl_arg_outer.py 9 31 8 \
+													> ../resnet50_tl_outer_output/output_K9.txt \
+													2> ../resnet50_tl_outer_output/error_K9.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/resnet50_tl_python_outer/archResNet50_tl_arg_outer.py 10 25 10 \
+													> ../resnet50_tl_outer_output/output_K10.txt \
+													2> ../resnet50_tl_outer_output/error_K10.txt &
+
+wait

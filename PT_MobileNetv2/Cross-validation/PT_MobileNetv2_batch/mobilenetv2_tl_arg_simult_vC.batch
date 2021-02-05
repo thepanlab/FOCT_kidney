@@ -1,0 +1,373 @@
+#BSUB -P BIF121
+#BSUB -W 2:00
+#BSUB -nnodes 15
+#BSUB -q batch
+#BSUB -J mobilenetv2_tl_simult_vC
+#BSUB -o /ccs/proj/bif121/kidney/mobilenetv2_tl_output_vC/mobilenetv2_tl_simult_vC_%J.out
+#BSUB -e /ccs/proj/bif121/kidney/mobilenetv2_tl_output_vC/mobilenetv2_tl_simult_vC_%J.err
+
+module load open-ce
+
+export OMP_NUM_THREADS=7
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 1 2 \
+													> ../mobilenetv2_tl_output_vC/output_K1_k2.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K1_k2.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 1 3 \
+													> ../mobilenetv2_tl_output_vC/output_K1_k3.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K1_k3.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 1 4 \
+													> ../mobilenetv2_tl_output_vC/output_K1_k4.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K1_k4.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 1 5 \
+													> ../mobilenetv2_tl_output_vC/output_K1_k5.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K1_k5.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 1 6 \
+													> ../mobilenetv2_tl_output_vC/output_K1_k6.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K1_k6.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 1 7 \
+													> ../mobilenetv2_tl_output_vC/output_K1_k7.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K1_k7.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 1 8 \
+													> ../mobilenetv2_tl_output_vC/output_K1_k8.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K1_k8.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 1 9 \
+													> ../mobilenetv2_tl_output_vC/output_K1_k9.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K1_k9.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 1 10 \
+													> ../mobilenetv2_tl_output_vC/output_K1_k10.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K1_k10.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 2 1 \
+													> ../mobilenetv2_tl_output_vC/output_K2_k1.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K2_k1.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 2 3 \
+													> ../mobilenetv2_tl_output_vC/output_K2_k3.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K2_k3.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 2 4 \
+													> ../mobilenetv2_tl_output_vC/output_K2_k4.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K2_k4.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 2 5 \
+													> ../mobilenetv2_tl_output_vC/output_K2_k5.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K2_k5.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 2 6 \
+													> ../mobilenetv2_tl_output_vC/output_K2_k6.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K2_k6.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 2 7 \
+													> ../mobilenetv2_tl_output_vC/output_K2_k7.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K2_k7.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 2 8 \
+													> ../mobilenetv2_tl_output_vC/output_K2_k8.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K2_k8.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 2 9 \
+													> ../mobilenetv2_tl_output_vC/output_K2_k9.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K2_k9.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 2 10 \
+													> ../mobilenetv2_tl_output_vC/output_K2_k10.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K2_k10.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 3 1 \
+													> ../mobilenetv2_tl_output_vC/output_K3_k1.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K3_k1.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 3 2 \
+													> ../mobilenetv2_tl_output_vC/output_K3_k2.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K3_k2.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 3 4 \
+													> ../mobilenetv2_tl_output_vC/output_K3_k4.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K3_k4.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 3 5 \
+													> ../mobilenetv2_tl_output_vC/output_K3_k5.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K3_k5.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 3 6 \
+													> ../mobilenetv2_tl_output_vC/output_K3_k6.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K3_k6.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 3 7 \
+													> ../mobilenetv2_tl_output_vC/output_K3_k7.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K3_k7.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 3 8 \
+													> ../mobilenetv2_tl_output_vC/output_K3_k8.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K3_k8.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 3 9 \
+													> ../mobilenetv2_tl_output_vC/output_K3_k9.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K3_k9.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 3 10 \
+													> ../mobilenetv2_tl_output_vC/output_K3_k10.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K3_k10.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 4 1 \
+													> ../mobilenetv2_tl_output_vC/output_K4_k1.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K4_k1.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 4 2 \
+													> ../mobilenetv2_tl_output_vC/output_K4_k2.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K4_k2.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 4 3 \
+													> ../mobilenetv2_tl_output_vC/output_K4_k3.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K4_k3.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 4 5 \
+													> ../mobilenetv2_tl_output_vC/output_K4_k5.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K4_k5.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 4 6 \
+													> ../mobilenetv2_tl_output_vC/output_K4_k6.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K4_k6.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 4 7 \
+													> ../mobilenetv2_tl_output_vC/output_K4_k7.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K4_k7.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 4 8 \
+													> ../mobilenetv2_tl_output_vC/output_K4_k8.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K4_k8.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 4 9 \
+													> ../mobilenetv2_tl_output_vC/output_K4_k9.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K4_k9.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 4 10 \
+													> ../mobilenetv2_tl_output_vC/output_K4_k10.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K4_k10.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 5 1 \
+													> ../mobilenetv2_tl_output_vC/output_K5_k1.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K5_k1.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 5 2 \
+													> ../mobilenetv2_tl_output_vC/output_K5_k2.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K5_k2.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 5 3 \
+													> ../mobilenetv2_tl_output_vC/output_K5_k3.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K5_k3.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 5 4 \
+													> ../mobilenetv2_tl_output_vC/output_K5_k4.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K5_k4.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 5 6 \
+													> ../mobilenetv2_tl_output_vC/output_K5_k6.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K5_k6.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 5 7 \
+													> ../mobilenetv2_tl_output_vC/output_K5_k7.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K5_k7.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 5 8 \
+													> ../mobilenetv2_tl_output_vC/output_K5_k8.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K5_k8.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 5 9 \
+													> ../mobilenetv2_tl_output_vC/output_K5_k9.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K5_k9.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 5 10 \
+													> ../mobilenetv2_tl_output_vC/output_K5_k10.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K5_k10.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 6 1 \
+													> ../mobilenetv2_tl_output_vC/output_K6_k1.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K6_k1.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 6 2 \
+													> ../mobilenetv2_tl_output_vC/output_K6_k2.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K6_k2.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 6 3 \
+													> ../mobilenetv2_tl_output_vC/output_K6_k3.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K6_k3.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 6 4 \
+													> ../mobilenetv2_tl_output_vC/output_K6_k4.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K6_k4.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 6 5 \
+													> ../mobilenetv2_tl_output_vC/output_K6_k5.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K6_k5.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 6 7 \
+													> ../mobilenetv2_tl_output_vC/output_K6_k7.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K6_k7.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 6 8 \
+													> ../mobilenetv2_tl_output_vC/output_K6_k8.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K6_k8.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 6 9 \
+													> ../mobilenetv2_tl_output_vC/output_K6_k9.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K6_k9.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 6 10 \
+													> ../mobilenetv2_tl_output_vC/output_K6_k10.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K6_k10.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 7 1 \
+													> ../mobilenetv2_tl_output_vC/output_K7_k1.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K7_k1.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 7 2 \
+													> ../mobilenetv2_tl_output_vC/output_K7_k2.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K7_k2.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 7 3 \
+													> ../mobilenetv2_tl_output_vC/output_K7_k3.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K7_k3.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 7 4 \
+													> ../mobilenetv2_tl_output_vC/output_K7_k4.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K7_k4.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 7 5 \
+													> ../mobilenetv2_tl_output_vC/output_K7_k5.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K7_k5.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 7 6 \
+													> ../mobilenetv2_tl_output_vC/output_K7_k6.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K7_k6.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 7 8 \
+													> ../mobilenetv2_tl_output_vC/output_K7_k8.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K7_k8.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 7 9 \
+													> ../mobilenetv2_tl_output_vC/output_K7_k9.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K7_k9.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 7 10 \
+													> ../mobilenetv2_tl_output_vC/output_K7_k10.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K7_k10.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 8 1 \
+													> ../mobilenetv2_tl_output_vC/output_K8_k1.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K8_k1.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 8 2 \
+													> ../mobilenetv2_tl_output_vC/output_K8_k2.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K8_k2.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 8 3 \
+													> ../mobilenetv2_tl_output_vC/output_K8_k3.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K8_k3.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 8 4 \
+													> ../mobilenetv2_tl_output_vC/output_K8_k4.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K8_k4.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 8 5 \
+													> ../mobilenetv2_tl_output_vC/output_K8_k5.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K8_k5.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 8 6 \
+													> ../mobilenetv2_tl_output_vC/output_K8_k6.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K8_k6.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 8 7 \
+													> ../mobilenetv2_tl_output_vC/output_K8_k7.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K8_k7.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 8 9 \
+													> ../mobilenetv2_tl_output_vC/output_K8_k9.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K8_k9.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 8 10 \
+													> ../mobilenetv2_tl_output_vC/output_K8_k10.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K8_k10.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 9 1 \
+													> ../mobilenetv2_tl_output_vC/output_K9_k1.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K9_k1.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 9 2 \
+													> ../mobilenetv2_tl_output_vC/output_K9_k2.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K9_k2.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 9 3 \
+													> ../mobilenetv2_tl_output_vC/output_K9_k3.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K9_k3.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 9 4 \
+													> ../mobilenetv2_tl_output_vC/output_K9_k4.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K9_k4.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 9 5 \
+													> ../mobilenetv2_tl_output_vC/output_K9_k5.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K9_k5.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 9 6 \
+													> ../mobilenetv2_tl_output_vC/output_K9_k6.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K9_k6.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 9 7 \
+													> ../mobilenetv2_tl_output_vC/output_K9_k7.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K9_k7.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 9 8 \
+													> ../mobilenetv2_tl_output_vC/output_K9_k8.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K9_k8.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 9 10 \
+													> ../mobilenetv2_tl_output_vC/output_K9_k10.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K9_k10.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 10 1 \
+													> ../mobilenetv2_tl_output_vC/output_K10_k1.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K10_k1.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 10 2 \
+													> ../mobilenetv2_tl_output_vC/output_K10_k2.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K10_k2.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 10 3 \
+													> ../mobilenetv2_tl_output_vC/output_K10_k3.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K10_k3.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 10 4 \
+													> ../mobilenetv2_tl_output_vC/output_K10_k4.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K10_k4.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 10 5 \
+													> ../mobilenetv2_tl_output_vC/output_K10_k5.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K10_k5.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 10 6 \
+													> ../mobilenetv2_tl_output_vC/output_K10_k6.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K10_k6.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 10 7 \
+													> ../mobilenetv2_tl_output_vC/output_K10_k7.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K10_k7.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 10 8 \
+													> ../mobilenetv2_tl_output_vC/output_K10_k8.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K10_k8.txt &
+
+jsrun -n1 -g1 -a1 -c7 -bpacked:7 python /ccs/proj/bif121/kidney/mobilenetv2_tl_python_vC/mobilenetv2_tl_arg_vC.py 10 9 \
+													> ../mobilenetv2_tl_output_vC/output_K10_k9.txt \
+													2> ../mobilenetv2_tl_output_vC/error_K10_k9.txt &
+
+wait
