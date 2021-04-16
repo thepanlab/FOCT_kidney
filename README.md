@@ -63,7 +63,7 @@ For *ResNet34* run the python code, for the rest you need to use arguments.    T
 
 # Paper
 [1] Chen Wang, Paul Calle, Nu Bao Tran Ton, Zuyuan Zhang, Feng Yan, Anthony M. Donaldson, Nathan A. Bradley, Zhongxin Yu, Kar-ming Fung, Chongle Pan, and Qinggong Tang, "Deep-learning-aided forward optical coherence tomography endoscope for percutaneous nephrostomy guidance," Biomed. Opt. Express 12, 2404-2418 (2021) 
-
+[Link](https://www.osapublishing.org/boe/fulltext.cfm?uri=boe-12-4-2404&id=449681)
 # Contact
 
 Paul Calle - pcallec@ou.edu <br>
