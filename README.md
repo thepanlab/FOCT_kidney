@@ -54,12 +54,13 @@ The language used is Python. We used Tensorflow 2.3.
 
 
 For *ResNet34* run the python code, for the rest you need to use arguments.    The python file is used as: <br>
-    > archResNet50_arg.py testing_kidney validation_kidney
+> archResNet50_arg.py testing_kidney validation_kidney
     
-    e.g.
-    > archResNet50_arg.py 1 2
+e.g.
 
-    The batch file was used in Summit supercomputer.
+> archResNet50_arg.py 1 2
+
+The batch file was used in Summit supercomputer.
 
 # Contact
 
