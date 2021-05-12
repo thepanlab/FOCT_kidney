@@ -1,7 +1,7 @@
 # README
 
-Code for the soon to be submitted paper: "Forward Optical Coherence Tomography Endoscope for Percutaneous Nephrostomy Guidance" 
-The following pieces of python code and jupyter notebooks. It will guide you to the use of:
+Code for the paper: "Deep-learning-aided forward optical coherence tomography endoscope for percutaneous nephrostomy guidance" [1] 
+The following pieces of python code and jupyter notebooks were used for the paper. The following architectures were used:
 * Resnet 34
 * Resnet 50 and Mobilenetv2 with and without pretrained initial weights from Imagenet Dataset.
 
@@ -62,6 +62,9 @@ e.g.
 
 The batch file was used in Summit supercomputer.
 
+# Paper
+[1] Chen Wang, Paul Calle, Nu Bao Tran Ton, Zuyuan Zhang, Feng Yan, Anthony M. Donaldson, Nathan A. Bradley, Zhongxin Yu, Kar-ming Fung, Chongle Pan, and Qinggong Tang, "Deep-learning-aided forward optical coherence tomography endoscope for percutaneous nephrostomy guidance," Biomed. Opt. Express 12, 2404-2418 (2021) 
+[Link](https://www.osapublishing.org/boe/fulltext.cfm?uri=boe-12-4-2404&id=449681)
 # Contact
 
 Paul Calle - pcallec@ou.edu <br>
