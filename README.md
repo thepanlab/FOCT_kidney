@@ -52,6 +52,9 @@ The language used is Python. We used Tensorflow 2.3.
         * *PT_Resnet50_python/* <br>
             * *archResNet50_tl_arg_outer.py* <br>
 
+* *Processing_results.ipynb*
+    Processing of the results to obtain the accuracies, epochs and time of all the combinations 
+
 * *Grad-CAM.ipynb* <br>
     Implementation of visual explanation using Grad-CAM[2] for the models obtained
 
