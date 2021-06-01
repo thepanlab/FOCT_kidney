@@ -53,10 +53,13 @@ The language used is Python. We used Tensorflow 2.3.
             * *archResNet50_tl_arg_outer.py* <br>
 
 * *Processing_results.ipynb* <br>
-    Processing of the results to obtain the accuracies, epochs and time of all the combinations 
+    Processing of the results to obtain the accuracies, epochs of all the combinations. Time is calculated for a few combinations
 
 * *Processing_predictions.ipynb* <br>
     Processing of the predictions to obtain the ROC curves
+
+* *Processing_time.ipynb* <br>
+    Complete processinf of time for cross-validation.
 
 * *Grad-CAM.ipynb* <br>
     Implementation of visual explanation using Grad-CAM[2] for the models obtained
