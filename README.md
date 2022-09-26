@@ -1,9 +1,11 @@
 # README
 
-Code for the paper: "Deep-learning-aided forward optical coherence tomography endoscope for percutaneous nephrostomy guidance"[1] 
+Code for the paper: "Deep-learning-aided forward optical coherence tomography endoscope for percutaneous nephrostomy guidance"[[1]](#1) 
 The following pieces of python code and jupyter notebooks were used for the paper. The following architectures were used:
 * Resnet 34
 * Resnet 50 and Mobilenetv2 with and without pretrained initial weights from Imagenet Dataset.
+
+The dataset can be found in [[2]](#2)
 
 # Prerequisites
 
@@ -62,7 +64,7 @@ The language used is Python. We used Tensorflow 2.3.
     Complete processinf of time for cross-validation.
 
 * *Grad-CAM.ipynb* <br>
-    Implementation of visual explanation using Grad-CAM[2] for the models obtained
+    Implementation of visual explanation using Grad-CAM[[3]](#3) for the models obtained
 
 For *ResNet34* run the python code, for the rest you need to use arguments.    The python file is used as: <br>
 > archResNet50_arg.py testing_kidney validation_kidney
@@ -74,12 +76,17 @@ e.g.
 The batch file was used in Summit supercomputer.
 
 # Paper
-[1] Chen Wang, Paul Calle, Nu Bao Tran Ton, Zuyuan Zhang, Feng Yan, Anthony M. Donaldson, Nathan A. Bradley, Zhongxin Yu, Kar-ming Fung, Chongle Pan, and Qinggong Tang, "Deep-learning-aided forward optical coherence tomography endoscope for percutaneous nephrostomy guidance," Biomed. Opt. Express 12, 2404-2418 (2021) 
+<a id = "1">[1]</a> Chen Wang, Paul Calle, Nu Bao Tran Ton, Zuyuan Zhang, Feng Yan, Anthony M. Donaldson, Nathan A. Bradley, Zhongxin Yu, Kar-ming Fung, Chongle Pan, and Qinggong Tang, "Deep-learning-aided forward optical coherence tomography endoscope for percutaneous nephrostomy guidance," Biomed. Opt. Express 12, 2404-2418 (2021) 
 
 [Paper link](https://www.osapublishing.org/boe/fulltext.cfm?uri=boe-12-4-2404&id=449681)
 
+# Dataset
+<a id = "2">[2]</a>
+Chen Wang, Paul Calle, Qinggong Tang, & Chongle Pan. (2022). OCT porcine kidney dataset for percutaneous nephrostomy guidance [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7113948
+
 # References
-[2] Selvaraju, R. R., Cogswell, M., Das, A., Vedantam, R., Parikh, D., & Batra, D. (2017). Grad-CAM: Visual explanations from deep networks via gradient-based localization. In Proceedings of the IEEE international conference on computer vision (pp. 618-626).
+<a id = "3">[3]</a>
+Selvaraju, R. R., Cogswell, M., Das, A., Vedantam, R., Parikh, D., & Batra, D. (2017). Grad-CAM: Visual explanations from deep networks via gradient-based localization. In Proceedings of the IEEE international conference on computer vision (pp. 618-626).
 
 # Contact
 
